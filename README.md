@@ -2,11 +2,14 @@
 
 ## Estudantes:
 Felipe Sorvenigo
+
 Matheus Neri
+
 Pedro Lopez Novais
+
 Yonathan Uchoa Simao Kaveski
 
-   Projeto referente ao segundo trabalho do curso de Programacao para dispositivos moveis, do segundo semestre de 2021;
+Projeto referente ao segundo trabalho do curso de Programacao para dispositivos moveis, do segundo semestre de 2021;
 
 
 ## **Visao Geral:**
