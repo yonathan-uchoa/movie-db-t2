@@ -1,12 +1,26 @@
 # TheMovieDB - Mobile
 
 ## Estudantes:
-Felipe Sorvenigo
-Matheus Neri
-Pedro Lopez Novais
-Yonathan Uchoa Simao Kaveski
+<<<<<<< HEAD
 
-   Projeto referente ao segundo trabalho do curso de Programacao para dispositivos moveis, do segundo semestre de 2021;
+  Felipe Sorvenigo
+
+  Matheus Neri
+
+  Pedro Lopez Novais
+
+  Yonathan Uchoa Simao Kaveski
+=======
+Felipe Sorvenigo
+
+Matheus Neri
+
+Pedro Lopez Novais
+
+Yonathan Uchoa Simao Kaveski
+>>>>>>> main
+
+Projeto referente ao segundo trabalho do curso de Programacao para dispositivos moveis, do segundo semestre de 2021;
 
 
 ## **Visao Geral:**
@@ -33,7 +47,7 @@ Yonathan Uchoa Simao Kaveski
 - **Catalogo local:** Possui a opcao de salvar localmente o catalogo de programas favoritos.
 
 
-### **Requisitos Nao-funcionais:**
+## **Requisitos Nao-funcionais:**
 - **Linguagem:** Java Android
 - **Banco de dados:** sera utilizado SQLite, junto a ORM greenDAO.
 - **Conexao:** Exige conexao com a internet para efetuar as pesquisas.
