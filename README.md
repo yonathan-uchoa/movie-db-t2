@@ -1,16 +1,5 @@
 # TheMovieDB - Mobile
 
-## Estudantes:
-<<<<<<< HEAD
-
-  Felipe Sorvenigo
-
-  Matheus Neri
-
-  Pedro Lopez Novais
-
-  Yonathan Uchoa Simao Kaveski
-=======
 Felipe Sorvenigo
 
 Matheus Neri
@@ -18,7 +7,6 @@ Matheus Neri
 Pedro Lopez Novais
 
 Yonathan Uchoa Simao Kaveski
->>>>>>> main
 
 Projeto referente ao segundo trabalho do curso de Programacao para dispositivos moveis, do segundo semestre de 2021;
 
