@@ -10,8 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.moviedb.api.JsonPlaceHolderApi;
-import com.example.moviedb.api.Result;
-import com.example.moviedb.api.Test;
+import com.example.moviedb.api.MovieData;
+import com.example.moviedb.api.MoviesSearch;
 import com.example.moviedb.model.DaoMaster;
 import com.example.moviedb.model.User;
 import com.example.moviedb.model.UserDao;
@@ -92,27 +92,27 @@ public class MainActivity extends AppCompatActivity {
         //E aqui que deve ser alterado para pegar do campo de pesquisa. "aranha" -> TextField.getText.
         data.put("query", "aranha");
 
-        Call<Test> call = jsonPlaceHolderApi.getPost(data);
-        call.enqueue(new Callback<Test>() {
+        Call<MoviesSearch> call = jsonPlaceHolderApi.getPost(data);
+        call.enqueue(new Callback<MoviesSearch>() {
             @Override
-            public void onResponse(Call<Test> call, Response<Test> response) {
+            public void onResponse(Call<MoviesSearch> call, Response<MoviesSearch> response) {
                 if(!response.isSuccessful()){
                     test.setText("Code: " + response.code());
                     return;
                 }else{
-                 List<Result> teste = response.body().getResults();
+                 List<MovieData> teste = response.body().getResults();
 
-                    for(Result result : teste){
+                    for(MovieData movieData : teste){
                         String content = "";
-                        content+= "title" + result.getOriginalTitle();
-                        content+= "\n vote average " + result.getVoteAverage();
+                        content+= "title" + movieData.getBackdropPath();
+                        content+= "\n vote average " + movieData.getVoteAverage();
                         content+= "x\n\n";
                         test.append(content);
                     }
                 }
             }
             @Override
-            public void onFailure(Call<Test> call, Throwable t) {
+            public void onFailure(Call<MoviesSearch> call, Throwable t) {
                 test.setText("ERROR!!"+t.getMessage());
 
             }

@@ -6,14 +6,14 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("jsonschema2pojo")
-public class Test {
+public class MoviesSearch {
 
     @SerializedName("page")
     @Expose
     private Integer page;
-    @SerializedName("results")
+    @SerializedName("movieData")
     @Expose
-    private List<Result> results = null;
+    private List<MovieData> movieData = null;
     @SerializedName("total_pages")
     @Expose
     private Integer totalPages;
@@ -29,12 +29,12 @@ public class Test {
         this.page = page;
     }
 
-    public List<Result> getResults() {
-        return results;
+    public List<MovieData> getResults() {
+        return movieData;
     }
 
-    public void setResults(List<Result> results) {
-        this.results = results;
+    public void setResults(List<MovieData> movieData) {
+        this.movieData = movieData;
     }
 
     public Integer getTotalPages() {

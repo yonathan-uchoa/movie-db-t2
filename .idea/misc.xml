@@ -3,7 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/layout-w1240dp/app_bar_main.xml" value="0.12416331994645248" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/fragment_filmes.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/fragment_reflow.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/fragment_series.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.16032608695652173" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>
@@ -12,5 +27,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressKotlinCodeStyleNotification">
+    <option name="disableForAll" value="true" />
   </component>
 </project>

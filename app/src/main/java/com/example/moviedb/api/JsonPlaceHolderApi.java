@@ -8,7 +8,7 @@ import retrofit2.http.QueryMap;
 
 public interface JsonPlaceHolderApi {
     @GET("search/multi")
-    Call<Test> getPost(
+    Call<MoviesSearch> getPost(
             @QueryMap Map<String, String> options
             );
 
