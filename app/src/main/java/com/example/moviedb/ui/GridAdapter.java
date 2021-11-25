@@ -1,6 +1,8 @@
 package com.example.moviedb.ui;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.moviedb.api.MoviesSearch;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 public class GridAdapter extends BaseAdapter {
     private Context ctx;
@@ -73,8 +79,20 @@ public class GridAdapter extends BaseAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageButton poster = new ImageButton(ctx);
-        poster.setImageURI(Uri.parse(movies.getResults().get(position).getPosterPath()));
+        ImageView poster = new ImageButton(ctx);
+        InputStream input;
+        Bitmap img = null;
+        String imgUrl = "https://image.tmdb.org/t/p/original/"
+                + movies.getResults().get(position).getPosterPath();
+
+        try {
+            input = new URL(imgUrl).openStream();
+            img = BitmapFactory.decodeStream(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        poster.setImageBitmap(img);
         poster.setLayoutParams(new ViewGroup.LayoutParams(150, 150));
         poster.setScaleType(ImageView.ScaleType.CENTER_CROP);
         poster.setPadding(5,5,5,5);
