@@ -50,48 +50,13 @@ public class FilmesFragment extends Fragment {
         textSearch = getActivity().findViewById(R.id.filmeSearchTxt);
         buttonSearch = getActivity().findViewById(R.id.filmeSearchBtn);
         grid_filmes = getActivity().findViewById(R.id.grid_filmes);
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.themoviedb.org/3/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
-        Map<String, String> data = new HashMap<>();
-        data.put("api_key", "bb0e5cab69c4b3502ab1a75cd9c7f371");
-        data.put("language", "pt-BR");
-
-
-        //E aqui que deve ser alterado para pegar do campo de pesquisa. "aranha" -> TextField.getText.
-        data.put("query", "");
-
-        Call<MoviesSearch> call = jsonPlaceHolderApi.getPost(data);
-
-        call.enqueue(new Callback<MoviesSearch>() {
-            @Override
-            public void onResponse(Call<MoviesSearch> call, Response<MoviesSearch> response) {
-                GridAdapter adapter = new GridAdapter();
-                if(!response.isSuccessful()){
-                    return;
-                }else{
-                    List<MovieData> teste = response.body().getResults();
-
-                    for(int i=0; i<adapter.getCount(); i++){
-                        /*String content = "";
-                        content+= "title" + movieData.getOriginalTitle();
-                        content+= "\n https://image.tmdb.org/t/p/original/" + movieData.getBackdropPath();
-                        content+= "x\n\n";
-                        test.append(content);
-                         */
-                    }
-                }
-            }
-            @Override
-            public void onFailure(Call<MoviesSearch> call, Throwable t) {
-                //test.setText("ERROR!!"+t.getMessage());
-
-            }
-        });
+        updateSearch("");
 
         return root;
     }
@@ -100,5 +65,26 @@ public class FilmesFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    public void updateSearch(String query){
+        Map<String, String> data = new HashMap<>();
+        data.put("api_key", "bb0e5cab69c4b3502ab1a75cd9c7f371");
+        data.put("language", "pt-BR");
+        data.put("query", query);
+
+        Call<MoviesSearch> call = jsonPlaceHolderApi.getPost(data);
+
+        call.enqueue(new Callback<MoviesSearch>() {
+            @Override
+            public void onResponse(Call<MoviesSearch> call, Response<MoviesSearch> response) {
+                GridAdapter adapter = new GridAdapter(getContext(), response.body());
+                grid_filmes.setAdapter(adapter);
+            }
+            @Override
+            public void onFailure(Call<MoviesSearch> call, Throwable t) {
+                return;
+            }
+        });
     }
 }

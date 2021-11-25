@@ -1,10 +1,13 @@
 package com.example.moviedb.ui;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.moviedb.api.MoviesSearch;
 
@@ -12,6 +15,10 @@ public class GridAdapter extends BaseAdapter {
     private Context ctx;
     private MoviesSearch movies;
 
+    public GridAdapter(Context ctx, MoviesSearch movies) {
+        this.ctx = ctx;
+        this.movies = movies;
+    }
 
     /**
      * How many items are in the data set represented by this Adapter.
@@ -66,6 +73,11 @@ public class GridAdapter extends BaseAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        ImageButton poster = new ImageButton(ctx);
+        poster.setImageURI(Uri.parse(movies.getResults().get(position).getPosterPath()));
+        poster.setLayoutParams(new ViewGroup.LayoutParams(150, 150));
+        poster.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        poster.setPadding(5,5,5,5);
+        return poster;
     }
 }
