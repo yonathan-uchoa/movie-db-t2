@@ -13,8 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.9"
+            android:layout_height="?attr/listPreferredItemHeight"
             android:orientation="horizontal">
 
             <EditText
@@ -34,15 +33,17 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="0.8"
-                android:drawableTop="@drawable/ic_baseline_search_24" />
+                android:clickable="false"
+                android:onClick="updateSearch"
+                app:icon="@drawable/ic_baseline_search_24"
+                app:iconGravity="top" />
 
         </LinearLayout>
 
         <GridView
             android:id="@+id/grid_filmes"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.1"
+            android:layout_height="wrap_content"
             android:numColumns="auto_fit"
             android:visibility="visible" />
     </LinearLayout>

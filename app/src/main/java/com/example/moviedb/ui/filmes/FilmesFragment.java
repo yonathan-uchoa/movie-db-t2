@@ -67,6 +67,10 @@ public class FilmesFragment extends Fragment {
         binding = null;
     }
 
+    public void updateSearch(View view){
+        updateSearch(textSearch.getText().toString());
+    }
+
     public void updateSearch(String query){
         Map<String, String> data = new HashMap<>();
         data.put("api_key", "bb0e5cab69c4b3502ab1a75cd9c7f371");
