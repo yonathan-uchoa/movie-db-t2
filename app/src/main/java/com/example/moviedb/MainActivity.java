@@ -62,15 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
-        PTPassword = findViewById(R.id.PTextPassword);
-        PTUsername = findViewById(R.id.PTextUsername);
-        PTNickName = findViewById(R.id.PTextNickName);
-        PTDescription = findViewById(R.id.PTextDescription);
-        API = findViewById(R.id.API);
 
-        test = findViewById(R.id.test);
-
-        ButtonAdd = findViewById(R.id.ButtonAdd);
     }
 
 

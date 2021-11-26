@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">movieDB</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Movie DB</string>
+    <string name="nav_header_subtitle">nothing more</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_search">Pesquisa</string>
+    <string name="menu_like">Favoritos</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
