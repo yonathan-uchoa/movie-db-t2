@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private UserDao userDao;
 
     private EditText PTPassword;
-    private EditText PTUsername;
+    private EditText PTEmail;
     private EditText PTNickName;
     private EditText PTDescription;
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addUser(){
         String password = PTPassword.getText().toString();
-        String username = PTUsername.getText().toString();
+        String username = PTEmail.getText().toString();
         String nickName = PTNickName.getText().toString();
         String description = PTDescription.getText().toString();
 
