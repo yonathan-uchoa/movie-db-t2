@@ -9,7 +9,6 @@ import com.example.moviedb.api.JsonPlaceHolderApi;
 public class HomeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
-    private MutableLiveData<JsonPlaceHolderApi> mJPHA;
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
@@ -20,10 +19,4 @@ public class HomeViewModel extends ViewModel {
         return mText;
     }
 
-    public void setJPHA(JsonPlaceHolderApi jsonPlaceHolderApi){
-        mJPHA.setValue(jsonPlaceHolderApi);
-    }
-    public LiveData<JsonPlaceHolderApi> getJPHA(){
-        return mJPHA;
-    }
 }
