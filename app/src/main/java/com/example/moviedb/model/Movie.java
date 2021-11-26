@@ -9,18 +9,14 @@ public class Movie {
     @Id
     private Long id;
     private String originalTitle;
-    private String genres;
-    private Double popularity;
     private String releaseDate;
     private Double voteAverage;
     private String overview;
-    @Generated(hash = 483575406)
-    public Movie(Long id, String originalTitle, String genres, Double popularity,
-            String releaseDate, Double voteAverage, String overview) {
+    @Generated(hash = 621089101)
+    public Movie(Long id, String originalTitle, String releaseDate,
+            Double voteAverage, String overview) {
         this.id = id;
         this.originalTitle = originalTitle;
-        this.genres = genres;
-        this.popularity = popularity;
         this.releaseDate = releaseDate;
         this.voteAverage = voteAverage;
         this.overview = overview;
@@ -39,18 +35,6 @@ public class Movie {
     }
     public void setOriginalTitle(String originalTitle) {
         this.originalTitle = originalTitle;
-    }
-    public String getGenres() {
-        return this.genres;
-    }
-    public void setGenres(String genres) {
-        this.genres = genres;
-    }
-    public Double getPopularity() {
-        return this.popularity;
-    }
-    public void setPopularity(Double popularity) {
-        this.popularity = popularity;
     }
     public String getReleaseDate() {
         return this.releaseDate;
