@@ -44,13 +44,13 @@ public class CadastroActivity extends AppCompatActivity {
         userDao = daoSession.getUserDao();
     }
 
-    private void cadastrar(View view){
+    public void cadastrar(View view){
         String password = textPassword.getText().toString();
         String username = textEmail.getText().toString();
         String nickName = textApelido.getText().toString();
         String description = textDescricao.getText().toString();
 
-        if (password != textPasswordConfirm.getText().toString()) {
+        if (password.equals(textPasswordConfirm.getText().toString())) {
             Toast.makeText(this, "Erro ao confirmar a senha",Toast.LENGTH_LONG).show();
             return;
         }
