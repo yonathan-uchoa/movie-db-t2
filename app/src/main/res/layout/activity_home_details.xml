@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/TVTitle"
-        android:layout_width="335dp"
-        android:layout_height="48dp"
+        android:layout_width="334dp"
+        android:layout_height="38dp"
         android:onClick="save"
         android:text="TextView"
         android:textSize="24sp"

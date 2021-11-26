@@ -58,9 +58,8 @@ public class HomeDetails extends AppCompatActivity {
         movie.setOriginalTitle(bundle.getString("title"));
         movie.setOverview(bundle.getString("overview"));
 
-        movieDao.save(movie);
 
-        Toast.makeText(this, "id" + String.valueOf(movie.getId()), Toast.LENGTH_SHORT).show();
-
+        if(movieDao.queryBuilder().where(MovieDao.Properties.OriginalTitle.eq(movie.getOriginalTitle())).list().size()== 0)
+            movieDao.save(movie);
     }
 }

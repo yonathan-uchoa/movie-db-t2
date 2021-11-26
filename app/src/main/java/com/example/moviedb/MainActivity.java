@@ -2,6 +2,7 @@ package com.example.moviedb;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -71,10 +72,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void cadastro(View view){
         // TODO
+        Intent it = new Intent(this, CadastroActivity.class);
+        startActivity(it);
     }
 
     public void semLogin(View view){
         // TODO
+        Intent it = new Intent(this, MainActivity2.class);
+        startActivity(it);
     }
 
 
